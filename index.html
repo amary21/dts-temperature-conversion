@@ -22,14 +22,14 @@
                         <div class="d-inline-flex align-items-center">
                             <input type="color" class="form-control form-control-color m-1" id="hex-color"
                                 value="#7ed6df" title="Choose your color">
-                                <button type="button" id="change-bg" class="btn btn-outline-dark">change background</button>
+                            <button type="button" id="change-bg" class="btn btn-outline-dark">change background</button>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-5">
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" id="from-temp">
                                 <option value="celcius">Celcius</option>
                                 <option value="reamur">Reamur</option>
                                 <option value="fahrenheit">Fahrenheit</option>
@@ -40,7 +40,7 @@
                             <h5>To</h5>
                         </div>
                         <div class="col-5">
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" id="to-temp">
                                 <option value="celcius">Celcius</option>
                                 <option value="reamur">Reamur</option>
                                 <option value="fahrenheit">Fahrenheit</option>
@@ -48,12 +48,11 @@
                             </select>
                         </div>
                         <div class="col-12 mt-5 mb-5">
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Input Temperatur">
+                            <input type="number" class="form-control" id="input-value" placeholder="Input Temperatur">
                         </div>
                     </div>
                     <h5 class="text-center">Result</h5>
-                    <h1 class="text-center">650</h1>
+                    <h1 class="text-center"><span id="result-value">0</span>º</h1>
                 </div>
             </div>
         </div>
@@ -62,7 +61,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
-    <script type="module" src="assets/js/main.js"></script>
+    <script src="assets/js/convert.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- <script type="module" src="assets/js/main.js"></script> -->
 </body>
 
 </html>

@@ -1,91 +1,120 @@
 class Convert {
+
+    #temp;
+    #result;
+
     constructor() {
-        this._temp = 0;
+        this.#temp = 0;
+        this.#result = 0;
     }
 
-    fromCelcius(toTemp, value) {
-        switch (toTemp) {
+    result(value, fromTemp, toTemp){
+        const valueNum = Math.floor(value)
+        switch (fromTemp) {
             case "celcius":
-                this._temp = value;
+                this.#result = this.#fromCelcius(toTemp, valueNum);
                 break;
             case "reamur":
-                this._temp = (4 / 5) * value;
+                this.#result = this.#fromReamur(toTemp, valueNum);
                 break;
-            case "farenheit":
-                this._temp = (9 / 5) * value + 32;
+            case "fahrenheit":
+                this.#result = this.#fromfahrenheit(toTemp, valueNum);
                 break;
             case "kelvin":
-                this._temp = value + 273;
+                this.#result = this.#fromKelvin(toTemp, valueNum);
                 break;
             default:
-                this._temp = 0;
+                this.#result = 0;
         }
 
-        return this._temp;
+        return this.#result;
     }
 
-    fromReamur(toTemp, value) {
+    #fromCelcius(toTemp, value) {
         switch (toTemp) {
             case "celcius":
-                this._temp = (5 / 4) * value;
+                this.#temp = value;
                 break;
             case "reamur":
-                this._temp = value;
+                this.#temp = (4 / 5) * value;
                 break;
-            case "farenheit":
-                this._temp = (9 / 4) * value + 32;
+            case "fahrenheit":
+                this.#temp = (9 / 5) * value + 32;
                 break;
             case "kelvin":
-                this._temp = (5 / 4) * value + 273;
+                this.#temp = value + 273.15;
                 break;
             default:
-                this._temp = 0;
+                this.#temp = 0;
         }
 
-        return this._temp;
+        return this.#temp;
     }
 
-    fromFarenheit(toTemp, value) {
+    #fromReamur(toTemp, value) {
         switch (toTemp) {
             case "celcius":
-                this._temp = 5/9 * (value - 32);
+                this.#temp = (5 / 4) * value;
                 break;
             case "reamur":
-                this._temp = 4/9 * (value - 32);
+                this.#temp = value;
                 break;
-            case "farenheit":
-                this._temp = value;
+            case "fahrenheit":
+                this.#temp = (9 / 4) * value + 32;
                 break;
             case "kelvin":
-                this._temp = 5/9 * (value - 32) + 273;
+                this.#temp = (5 / 4) * value + 273.15;
                 break;
             default:
-                this._temp = 0;
+                this.#temp = 0;
         }
 
-        return this._temp;
+        return this.#temp;
     }
 
-    fromKelvin(toTemp, value) {
+    #fromfahrenheit(toTemp, value) {
         switch (toTemp) {
             case "celcius":
-                this._temp = value - 273;
+                this.#temp = 5/9 * (value - 32);
                 break;
             case "reamur":
-                this._temp = 4/5 * (value - 273);
+                this.#temp = 4/9 * (value - 32);
                 break;
-            case "farenheit":
-                this._temp = 9/5 * (value - 273) + 32;
+            case "fahrenheit":
+                this.#temp = value;
                 break;
             case "kelvin":
-                this._temp = value;
+                this.#temp = 5/9 * (value - 32) + 273.15;
                 break;
             default:
-                this._temp = 0;
+                this.#temp = 0;
         }
 
-        return this._temp;
+        return this.#temp;
+    }
+
+    #fromKelvin(toTemp, value) {
+        switch (toTemp) {
+            case "celcius":
+                this.#temp = value - 273.15;
+                break;
+            case "reamur":
+                this.#temp = 4/5 * (value - 273.15);
+                break;
+            case "fahrenheit":
+                this.#temp = 9/5 * (value - 273.15) + 32;
+                break;
+            case "kelvin":
+                this.#temp = value;
+                break;
+            default:
+                this.#temp = 0;
+        }
+
+        return this.#temp;
     }
 }
 
-export { Convert };
+//export class Convert
+// export default Convert;
+module.exports = Convert;

@@ -1,0 +1,24 @@
+{
+  "name": "dts-temperature-conversion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amary21/dts-temperature-conversion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amary21/dts-temperature-conversion/issues"
+  },
+  "homepage": "https://github.com/amary21/dts-temperature-conversion#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
