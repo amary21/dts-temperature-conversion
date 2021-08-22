@@ -1,6 +1,23 @@
 //import class Convert on index.test.js
 // import Convert from './assets/js/convert.js';
 
+/*
+skema pengujian:
+~ convert 12º celcius ke reamur = 9.600000000000001º ?
+~ convert 12º celcius ke fahrenheit = 53.6º ?
+~ convert 12º celcius ke kelvin = 285.15º ?
+~ convert 12º reamur ke celcius = 15º ?
+~ convert 12º reamur ke fahrenheit = 59º ?
+~ convert 12º reamur ke kelvin = 288.15º ?
+~ convert 12º fahrenheit ke celcius = -11.11111111111111º ?
+~ convert 12º fahrenheit ke reamur = -8.88888888888889º ?
+~ convert 12º fahrenheit ke kelvin = 262.0388888888889º ?
+~ convert 12º kelvin ke celcius = -261.15º ?
+~ convert 12º kelvin ke reamur = -208.92º ?
+~ convert 12º kelvin ke fahrenheit = -438.07º ?
+*/
+
+
 const Convert = require('./assets/js/convert.js');
 
 const convert = new Convert();
